@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <title>Quizz</title>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        
+        <div class="tela-inicial" id="tela-inicial">
+            <h1 class="title">Bem-Vindo ao Seu pesadelo :) <i class="fas fa-atom"></i></h1>
+            <p class="descrição">Prove que você é capaz de acertar ao menos UMA questao hehehe. Boa Sorte você vai precisar! <br>
+                <br>Aaa Quase me esqueci, o quizz tem Tempo entao seja rapido!
+            </p>
+            <button class="btn-iniciar" onclick="iniciarQuiz()">Iniciar Quizz <i class="fas fa-play"></i></button>
+        </div>
+
+        <!-- Pergunta 1 -->
+        <div class="pergunta hidden" id="pergunta1">
+            <h1 class="title">Força e Movimento <i class="fas fa-bolt"></i></h1>
+            <p class="descrição">Qual é a primeira lei de Newton?</p>
+            <div class="respostas">
+                <input type="radio" name="pergunta1" id="pergunta1_opcao1"><label for="pergunta1_opcao1">Um objeto em repouso permanece em repouso, e um objeto em movimento permanece em movimento com velocidade constante, a menos que uma força resultante atue sobre ele.</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1_opcao2"><label for="pergunta1_opcao2">A aceleração de um objeto é diretamente proporcional à força resultante que age sobre ele e inversamente proporcional à sua massa.</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1_opcao3"><label for="pergunta1_opcao3">Para cada ação, há uma reação de igual magnitude, mas em direção oposta.</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1_opcao4"><label for="pergunta1_opcao4">A velocidade de um objeto é diretamente proporcional à força aplicada.</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1_opcao5"><label for="pergunta1_opcao5">A força é inversamente proporcional à aceleração.</label><br>
+            </div>
+            <button class="btn-proxima" onclick="mostrarProximaPergunta('pergunta1')">Próxima Pergunta <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="pergunta hidden" id="pergunta2">
+            <h1 class="title">Leis de Newton <i class="fas fa-bolt"></i></h1>
+            <p class="descrição">Qual é a segunda lei de Newton?</p>
+            <div class="respostas">
+                <input type="radio" name="pergunta2" id="pergunta2_opcao1"><label for="pergunta2_opcao1">A aceleração de um objeto é diretamente proporcional à força líquida que age sobre ele e inversamente proporcional à sua massa.</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2_opcao2"><label for="pergunta2_opcao2">A força total sobre um objeto é igual à sua massa vezes a aceleração.</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2_opcao3"><label for="pergunta2_opcao3">Um objeto em repouso permanece em repouso, e um objeto em movimento permanece em movimento com velocidade constante.</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2_opcao4"><label for="pergunta2_opcao4">A segunda lei de Newton não se aplica a objetos em movimento circular.</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2_opcao5"><label for="pergunta2_opcao5">A aceleração de um objeto é inversamente proporcional à força resultante.</label><br>
+            </div>
+            <button class="btn-proxima" onclick="mostrarProximaPergunta('pergunta2')">Próxima Pergunta <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="pergunta hidden" id="pergunta3">
+            <h1 class="title">Gravidade <i class="fas fa-gravity"></i></h1>
+            <p class="descrição">Qual é a equação da lei da gravitação universal de Newton?</p>
+            <div class="respostas">
+                <input type="radio" name="pergunta3" id="pergunta3_opcao1"><label for="pergunta3_opcao1">F = G * (m1 * m2) / r^2</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3_opcao2"><label for="pergunta3_opcao2">F = m * a</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3_opcao3"><label for="pergunta3_opcao3">E = mc^2</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3_opcao4"><label for="pergunta3_opcao4">F = G / r^2</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3_opcao5"><label for="pergunta3_opcao5">A força gravitacional é independente da massa dos objetos envolvidos.</label><br>
+            </div>
+            <button class="btn-proxima" onclick="mostrarProximaPergunta('pergunta3')">Próxima Pergunta <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="pergunta hidden" id="pergunta4">
+            <h1 class="title">Óptica <i class="fas fa-eye"></i></h1>
+            <p class="descrição">Qual é a lei da reflexão da luz?</p>
+            <div class="respostas">
+                <input type="radio" name="pergunta4" id="pergunta4_opcao1"><label for="pergunta4_opcao1">A lei da reflexão afirma que o ângulo de incidência é igual ao ângulo de reflexão.</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4_opcao2"><label for="pergunta4_opcao2">A luz não sofre reflexão.</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4_opcao3"><label for="pergunta4_opcao3">A luz reflete em um ângulo maior do que o ângulo de incidência.</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4_opcao4"><label for="pergunta4_opcao4">A lei da reflexão não se aplica a superfícies não metálicas.</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4_opcao5"><label for="pergunta4_opcao5">A intensidade da luz refletida é independente do ângulo de incidência.</label><br>
+            </div>
+            <button class="btn-proxima" onclick="mostrarProximaPergunta('pergunta4')">Próxima Pergunta <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="pergunta hidden" id="pergunta5">
+            <h1 class="title">Termodinâmica <i class="fas fa-thermometer-half"></i></h1>
+            <p class="descrição">O que é a primeira lei da termodinâmica?</p>
+            <div class="respostas">
+                <input type="radio" name="pergunta5" id="pergunta5_opcao1"><label for="pergunta5_opcao1">A energia total de um sistema isolado permanece constante.</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5_opcao2"><label for="pergunta5_opcao2">O calor flui do corpo mais frio para o corpo mais quente.</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5_opcao3"><label for="pergunta5_opcao3">A entropia de um sistema aumenta ao longo do tempo.</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5_opcao4"><label for="pergunta5_opcao4">A primeira lei da termodinâmica não se aplica a sistemas gasosos.</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5_opcao5"><label for="pergunta5_opcao5">O calor é uma forma de energia potencial.</label><br>
+            </div>
+            <!-- Botão para finalizar o Quizz -->
+            <button class="btn-finalizar" onclick="mostrarResultado()">Finalizar Quizz <i class="fas fa-poll-h"></i></button>
+        </div>
+
+
+        <!-- Div para exibir o resultado -->
+        <div id="resultado" class="resultado hidden">
+            <h2>Resultado do Quiz</h2>
+            <p>Acertos: <span id="acertos"></span></p>
+            <p>Erros: <span id="erros"></span></p>
+            <p>Tempo Médio por Resposta: <span id="tempoMedio"></span> segundos</p>
+
+            <!-- Botão para recomeçar o Quizz -->
+            <button class="btn-recomecar" onclick="recomecarQuizz()">Recomeçar Quizz <i class="fas fa-redo"></i></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
