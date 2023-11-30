@@ -5,6 +5,23 @@ let tempoTotal = 0;
 let tempoMedio = 0;
 let contadorTempo;
 
+function respostaEstaCorreta(pergunta, respostaSelecionada) {
+    switch (pergunta) {
+        case 1:
+            return respostaSelecionada === 'pergunta1_opcao1';
+        case 2:
+            return respostaSelecionada === 'pergunta2_opcao1';
+        case 3:
+            return respostaSelecionada === 'pergunta3_opcao1';
+        case 4:
+            return respostaSelecionada === 'pergunta4_opcao1';
+        case 5:
+            return respostaSelecionada === 'pergunta5_opcao1';
+        default:
+            return false;
+    }
+}
+
 function iniciarQuiz() {
     document.getElementById('tela-inicial').style.display = 'none';
     document.getElementById(`pergunta${perguntaAtual}`).style.display = 'block';
@@ -30,6 +47,12 @@ function mostrarProximaPergunta(perguntaAtualID) {
     if (respostaSelecionada) {
         const label = document.querySelector(`label[for=${respostaSelecionada}]`);
         label.classList.add('selecionada');
+
+        if (respostaEstaCorreta(perguntaAtual, respostaSelecionada)) {
+            acertos++;
+        } else {
+            erros++;
+        }
     }
 
     const perguntaAtualElement = document.getElementById(perguntaAtualID);
@@ -51,7 +74,6 @@ function mostrarProximaPergunta(perguntaAtualID) {
         }
     }, 1000); // 1000 milissegundos = 1 segundo, ajuste conforme necessário
 }
-
 
 function reiniciarContadorTempo() {
     clearInterval(contadorTempo);
@@ -83,9 +105,6 @@ function mostrarResultado() {
     const tempoMedioElement = document.getElementById('tempoMedio');
     tempoMedioElement.textContent = tempoMedio.toFixed(2) + ' segundos';
 }
-
-
-
 
 function recomecarQuizz() {
     // Redirecionar para a mesma página
