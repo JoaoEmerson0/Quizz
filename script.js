@@ -106,6 +106,5 @@ function mostrarResultado() {
 }
 
 function recomecarQuizz() {
-    // Redirecionar para a mesma página
     window.location.href = window.location.href;
 }
