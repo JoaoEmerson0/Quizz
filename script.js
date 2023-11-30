@@ -72,7 +72,7 @@ function mostrarProximaPergunta(perguntaAtualID) {
             pararContadorTempo();
             mostrarResultado();
         }
-    }, 1000);
+    }, 1000); // 1000 milissegundos = 1 segundo, ajuste conforme necessário
 }
 
 function reiniciarContadorTempo() {
@@ -99,6 +99,7 @@ function mostrarResultado() {
     const errosElement = document.getElementById('erros');
     errosElement.textContent = erros;
 
+    // Calcular tempo médio por resposta
     tempoMedio = tempoTotal / 5;
 
     const tempoMedioElement = document.getElementById('tempoMedio');
@@ -106,5 +107,6 @@ function mostrarResultado() {
 }
 
 function recomecarQuizz() {
+    // Redirecionar para a mesma página
     window.location.href = window.location.href;
 }
