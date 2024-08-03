@@ -1,0 +1,103 @@
+/* Reset CSS básico para uma base consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo da caixa principal */
+.caixa-principal {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixa-principal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do título */
+.caixa-principal h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Estilo da caixa de perguntas */
+.caixa-pergunta {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    min-height: 120px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Estilo das alternativas */
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Estilo dos botões de alternativas */
+.caixa-alternativas button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.caixa-alternativas button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.caixa-alternativas button:active {
+    transform: translateY(0);
+}
+
+/* Estilo da caixa de resultado */
+.caixa-resultado {
+    background-color: #2e65cc;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Estilo do texto do resultado */
+.texto-resultado {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
