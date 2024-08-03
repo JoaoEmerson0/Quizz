@@ -1,11 +1,10 @@
-/* Reset CSS básico para uma base consistente */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos globais */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #e5e5e5;
@@ -16,7 +15,6 @@ body {
     height: 100vh;
 }
 
-/* Estilo da caixa principal */
 .caixa-principal {
     width: 90%;
     max-width: 600px;
@@ -33,7 +31,6 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo do título */
 .caixa-principal h1 {
     font-size: 28px;
     color: #2c3e50;
@@ -41,7 +38,6 @@ body {
     font-weight: bold;
 }
 
-/* Estilo da caixa de perguntas */
 .caixa-pergunta {
     background-color: #f1f1f1;
     border-radius: 8px;
@@ -53,7 +49,6 @@ body {
     color: #555;
 }
 
-/* Estilo das alternativas */
 .caixa-alternativas {
     display: flex;
     flex-direction: column;
@@ -61,7 +56,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Estilo dos botões de alternativas */
 .caixa-alternativas button {
     background-color: #3498db;
     color: #ffffff;
@@ -83,7 +77,6 @@ body {
     transform: translateY(0);
 }
 
-/* Estilo da caixa de resultado */
 .caixa-resultado {
     background-color: #2e65cc;
     color: #ffffff;
@@ -95,7 +88,6 @@ body {
     line-height: 1.5;
 }
 
-/* Estilo do texto do resultado */
 .texto-resultado {
     display: inline-block;
     vertical-align: middle;
